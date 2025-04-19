@@ -1,4 +1,7 @@
 ### domashka po python
-#### :file_folder: resume  :paperclip: Шаблонизатор Jinja2
-#### :file_folder: db_py   :paperclip: Использование базы данных
-#### :file_folder: auth_py :paperclip: Добавление аутентификации
+#### :page_facing_up: Шаблонизатор Jinja2
+#### :file_folder: resume
+#### :page_facing_up: Использование базы данных
+#### :file_folder: db_py
+#### :page_facing_up: Добавление аутентификации
+#### :file_folder: auth_py
