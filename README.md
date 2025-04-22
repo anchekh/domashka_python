@@ -1,7 +1,9 @@
 ### domashka po python
 #### :page_facing_up: Шаблонизатор Jinja2
-#### :file_folder: resume
+##### :file_folder: resume
 #### :page_facing_up: Использование базы данных
-#### :file_folder: db_py
+##### :file_folder: db_py
+#### :page_facing_up: Миграция базы данных
+##### :file_folder: migration_py
 #### :page_facing_up: Добавление аутентификации
-#### :file_folder: auth_py
+##### :file_folder: auth_py
