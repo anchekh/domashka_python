@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Студенты группы IT-СОИП-23-В2
+{% endblock %}
+
+{% block content %}
+<h1 class="mb-5">Список студентов</h1>
+
+<div class="card-columns">
+    <div class="row">
+        {% for student in students %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header fw-bold">
+                    {{ student.last_name }} {{ student.first_name }} {{ student.surname }}
+                </div>
+                <div class="card-body">
+                    <p class="badge bg-primary text-wrap">Студент</p>
+                    <p class="card-text">
+                        <i class="fa fa-envelope"></i> 
+                        <strong>{{ student.email }}</strong>
+                    </p>
+                    <p class="card-text">
+                        <i class="fa fa-id-card"></i> id: {{ student.id }}
+                    </p>
+                </div>
+                <div class="card-footer text-muted"> Группа: IT-СОИП-23-В2 </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
