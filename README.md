@@ -7,3 +7,5 @@
 ##### :file_folder: migration_py
 #### :page_facing_up: Добавление аутентификации
 ##### :file_folder: auth_py
+#### :page_facing_up: Создание WEB-приложения на Flask
+##### :file_folder: wapp_py
