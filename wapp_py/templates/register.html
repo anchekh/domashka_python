@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+        <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "lucida console", monospace;
+            text-align: center;
+        }
+        .login-container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        h1 {
+            text-align: center;
+            font-size: 18px;
+            color: rgb(90, 90, 90);
+        }
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #000;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border 0.3s;
+            margin-top: 16px;
+            text-align: start;
+        }
+        input:focus {
+            border-color: #000000;
+            outline: none;
+            box-shadow: 0 0 0 2px #000000;
+        }
+        button {
+            border-radius: 40px;
+            background-color: #000;
+            color: #fff;
+            width: 170px;
+            height: 50px;
+            margin-top: 16px;
+        }
+        p {
+            margin-top: 16px;
+            font-size: 12px;
+        }
+        a {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+    {% endfor %}
+
+    <form method="POST" class="login-container">
+        <h1>Регистрация</h1>
+        <input type="text" name="username" placeholder="Имя пользователя" required>
+        <input type="password" name="password" placeholder="Пароль" required>
+        <button type="submit">Зарегистрироваться</button>
+        <p>Уже есть аккаунт? <a href="/login">Войти</a></p>
+    </form>
+</body>
+</html>

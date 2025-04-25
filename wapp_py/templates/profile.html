@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "lucida console", monospace;
+        text-decoration: none;
+    }
+
+    body {
+        background-color: #fff;
+    }
+
+    .header_container {
+        height: 60px;
+        background-color: #fff;
+        color: 000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .title {
+    font-size: 32px;
+    }
+
+    .logout {
+        margin-right: 10px;
+        cursor: pointer;
+        border-radius: 40px;
+        background-color: #000;
+        color: #fff;
+        width: 80px;
+        height: 40px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        justify-content: center;
+    }
+
+    .main-container {
+        display: flex;
+        margin-top: 60px;
+        padding: 20px;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .left-part, .right-part {
+        width: 300px;
+    }
+
+    .mid-part {
+        flex: 1;
+    }
+
+    .photo {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .photo img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        border: 3px solid #f0f2f5;
+    }
+
+    .info, .friends-list, .group-list, .creation-post, .post {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #363636;
+        text-align: center;
+    }
+
+    .info-item {
+        margin-bottom: 10px;
+    }
+
+    .info-label {
+        font-weight: bold;
+        color: #606770;
+    }
+
+    .friend, .group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .friend:last-child, .group:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .friend img, .group img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 10px;
+    }
+
+    .creation-post textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        resize: none;
+        margin-bottom: 10px;
+        height: 80px;
+    }
+
+    .creation-post button {
+        background-color: #000000;
+        color: #fff;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .post {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .post-header img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 10px;
+    }
+
+    .post-content {
+        margin-bottom: 10px;
+    }
+
+    .post-actions {
+        display: flex;
+        gap: 15px;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+    }
+
+    .post-actions button {
+        background: none;
+        border: none;
+        color: #606770;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+</style>
+</head>
+<body>
+<header>
+    <div class="header_container">
+        <a class="logo" href="/news">
+            <img src="https://cdn-icons-png.flaticon.com/128/9066/9066785.png" data-src="https://cdn-icons-png.flaticon.com/128/9066/9066785.png" alt="кошка" title="кошка" width="50" height="50" class="lzy lazyload--done" srcset="https://cdn-icons-png.flaticon.com/128/9066/9066785.png 4x">
+        </a>
+        <p class="title">Профиль</p>
+        <a class="logout" href="/register">Выход</a>
+    </div>
+</header>
+<div class="main-container">
+    <div class="left-part">
+        <div class="photo">
+            <img src="https://i.pinimg.com/736x/2e/26/ba/2e26baa99c1cf85351af4551d1472359.jpg" alt="Фото профиля">
+            <h2>Кто Я</h2>
+            <div>Сейчас онлайн</div>
+        </div>
+        <div class="info">
+            <h2>Информация</h2>
+            <div class="info-item">
+                <div class="info-label">Дата рождения:</div>
+                <div>32 августа 2010</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Город:</div>
+                <div>Не указан</div>
+            </div>
+        </div>
+    </div>
+    <div class="mid-part">
+        <div class="creation-post">
+            <h2>Создать пост</h2>
+            <textarea placeholder="Что у вас нового?"></textarea>
+            <button>Опубликовать</button>
+        </div>
+        <div class="post">
+            <div class="post-header">
+                <img src="https://i.pinimg.com/736x/2e/26/ba/2e26baa99c1cf85351af4551d1472359.jpg" alt="Фото профиля">
+                <div>
+                    <div><strong>Кто Я</strong></div>
+                    <div style="font-size: 12px; color: #606770;">Только что</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>Утром я ничего не мог есть. Только выпил две чашки чаю с хлебом и маслом, с картошкой и сосиской.</p>
+            </div>
+            <div class="post-actions">
+                <button>&#129313; Нравится</button>
+                <button>&#128172; Комментировать</button>
+                <button>&#8618; Репост</button>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-header">
+                <img src="https://i.pinimg.com/736x/2e/26/ba/2e26baa99c1cf85351af4551d1472359.jpg" alt="Фото профиля">
+                <div>
+                    <div><strong>Кто Я</strong></div>
+                    <div style="font-size: 12px; color: #606770;">2 часа назад</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>Я не ленивый. Я нахожусь в режиме энергосбережения.</p>
+            </div>
+            <div class="post-actions">
+                <button>&#129313; Нравится</button>
+                <button>&#128172; Комментировать</button>
+                <button>&#8618; Репост</button>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-header">
+                <img src="https://i.pinimg.com/736x/2e/26/ba/2e26baa99c1cf85351af4551d1472359.jpg" alt="Фото профиля">
+                <div>
+                    <div><strong>Кто Я</strong></div>
+                    <div style="font-size: 12px; color: #606770;">22.02.2022 10:00</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <img src="https://twam.ru/wp-content/uploads/2024/02/sinii-cherep-1.webp" width="600px">
+            </div>
+            <div class="post-actions">
+                <button>&#129313; Нравится</button>
+                <button>&#128172; Комментировать</button>
+                <button>&#8618; Репост</button>
+            </div>
+        </div>
+    </div>
+    <div class="right-part">
+        <div class="friends-list">
+            <h2>Друзья (0)</h2>
+            <!-- <div class="friend">
+                <img src="" alt="Друг">
+                <div></div>
+            </div> -->
+        </div>
+        <div class="group-list">
+            <h2>Группы (1)</h2>
+            <div class="group">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKqqHrrqETuxY-jDaEjFSAk0f1cWnp-79wHMMJwulbTwi_W86rmrzBbdIDIaOQMb3LscQ&usqp=CAU" alt="Группа">
+                <div>Котята на каждый день</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
