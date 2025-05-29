@@ -15,3 +15,5 @@
 ##### :file_folder: django_py/django_py
 #### :page_facing_up: Приложение Pages
 ##### :file_folder: django_resume
+#### :page_facing_up: Приложение «Доска объявлений»
+##### :file_folder: message-board
