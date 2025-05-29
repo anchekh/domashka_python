@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Доска объявлений</title>
+    <style>
+        body {
+            background-color: #242424;
+            margin: 50px;
+        }
+        h1 {
+            color: #fff;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        li {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .post-text {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        .author {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<h1>Доска объявлений</h1>
+<ul>
+    {% for post in post_list %}
+    <li>
+        <div class="post-text">{{ post.text }}</div>
+        <div class="author">Автор: {{ post.author.username|default:"Неизвестен" }}</div>
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
