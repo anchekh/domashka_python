@@ -17,3 +17,5 @@
 ##### :file_folder: django_resume
 #### :page_facing_up: Приложение «Доска объявлений»
 ##### :file_folder: message-board
+#### :page_facing_up: Приложение "Блог"
+##### :file_folder: blog
